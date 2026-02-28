@@ -519,7 +519,7 @@
 
     if (isCenter) {
       result = c25 - c27;
-      formulaHTML = fmt(c25) + ' <span class="eq">−</span> ' + fmt(c27) + ' <span class="eq">=</span> <span class="ans">' + fmt(result) + '</span>';
+      formulaHTML = fmt(c25) + ' <span class="eq">−</span> ' + fmt(c27) + ' <span class="eq">=</span> <span class="ans">' + Math.round(result) + '</span>';
     } else if (isRight) {
       result = (c26 - c25) + c27;
       formulaHTML = '( ' + fmt(c26) + ' <span class="eq">−</span> ' + fmt(c25) + ' ) <span class="eq">+</span> ' + fmt(c27) + ' <span class="eq">=</span> <span class="ans">' + fmt(result) + '</span>';
@@ -533,7 +533,7 @@
 
     signEl.className = isPositive ? 'ch-sign-pos' : 'ch-sign-neg';
     signEl.textContent = isPositive ? '(+)' : '(−)';
-    document.getElementById('numSpan').textContent = fmt(result);
+    document.getElementById('numSpan').textContent = isCenter ? Math.round(result) : fmt(result);
     document.getElementById('formulaDisplay').innerHTML = formulaHTML;
     document.getElementById('modeTag').textContent = state.side.toUpperCase() + ' · ' + state.type.toUpperCase();
 
