@@ -214,6 +214,7 @@
     padding: 0.7rem 2.8rem 0.7rem 0.85rem;
     outline: none;
     transition: border-color 0.18s, box-shadow 0.18s, background 0.18s;
+    appearance: none;
     -moz-appearance: textfield;
     letter-spacing: 0.02em;
   }
@@ -519,13 +520,13 @@
 
     if (isCenter) {
       result = c25 - c27;
-      formulaHTML = fmt(c25) + ' <span class="eq">−</span> ' + fmt(c27) + ' <span class="eq">=</span> <span class="ans">' + Math.round(result) + '</span>';
+      formulaHTML = fmt(c25) + ' <span class="eq">−</span> ' + fmt(c27) + ' <span class="eq">=</span> <span class="ans">' + Math.abs(Math.round(result)) + '</span>';
     } else if (isRight) {
       result = (c26 - c25) + c27;
-      formulaHTML = '( ' + fmt(c26) + ' <span class="eq">−</span> ' + fmt(c25) + ' ) <span class="eq">+</span> ' + fmt(c27) + ' <span class="eq">=</span> <span class="ans">' + fmt(result) + '</span>';
+      formulaHTML = '( ' + fmt(c26) + ' <span class="eq">−</span> ' + fmt(c25) + ' ) <span class="eq">+</span> ' + fmt(c27) + ' <span class="eq">=</span> <span class="ans">' + fmt(Math.abs(result)) + '</span>';
     } else {
       result = (c25 + c26) - c27;
-      formulaHTML = '( ' + fmt(c25) + ' <span class="eq">+</span> ' + fmt(c26) + ' ) <span class="eq">−</span> ' + fmt(c27) + ' <span class="eq">=</span> <span class="ans">' + fmt(result) + '</span>';
+      formulaHTML = '( ' + fmt(c25) + ' <span class="eq">+</span> ' + fmt(c26) + ' ) <span class="eq">−</span> ' + fmt(c27) + ' <span class="eq">=</span> <span class="ans">' + fmt(Math.abs(result)) + '</span>';
     }
 
     const signEl = document.getElementById('signSpan');
@@ -533,7 +534,7 @@
 
     signEl.className = isPositive ? 'ch-sign-pos' : 'ch-sign-neg';
     signEl.textContent = isPositive ? '(+)' : '(−)';
-    document.getElementById('numSpan').textContent = isCenter ? Math.round(result) : fmt(result);
+    document.getElementById('numSpan').textContent = isCenter ? Math.abs(Math.round(result)) : fmt(Math.abs(result));
     document.getElementById('formulaDisplay').innerHTML = formulaHTML;
     document.getElementById('modeTag').textContent = state.side.toUpperCase() + ' · ' + state.type.toUpperCase();
 
