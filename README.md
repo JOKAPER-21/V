@@ -1,81 +1,111 @@
 # 📍 Chainage Finder
 
-A modern, lightweight web application for surveyors and civil engineers to quickly calculate chainage values with an intuitive interface.
+> A modern, lightweight web application for **surveyors**, **site engineers**, and **civil engineers** to quickly calculate chainage values with a clean, intuitive interface.
 
-Designed to simplify field calculations, reduce manual errors, and improve productivity.
+Designed to simplify field calculations, reduce manual errors, and improve productivity during surveying and construction work.
+
+---
+
+## 🌐 Live Demo
+
+🚀 **Try Chainage Finder online**
+
+👉 **https://jokaper-21.github.io/VID_ChainageFinder/chainage_finder.html**
+
+No installation required—simply open the link in any modern web browser.
 
 ---
 
 ## ✨ Features
 
-- 🎯 Calculate chainage instantly
-- ↔️ Left / Right side calculation modes
-- 📍 With Chainage & Without Chainage modes
-- ➕ Dynamic Chainage KM input fields
-- 📊 Automatic Chainage KM total
-- 🧮 Live formula display
-- 📋 One-click copy of calculated result
-- 🌙 Modern dark UI
-- 📱 Responsive design
-- ⚡ Real-time calculations
+* 🎯 Instant chainage calculation
+* ↔️ Left & Right side calculation modes
+* 📍 With Chainage & Without Chainage modes
+* ➕ Multiple Chainage KM input fields
+* 📊 Automatic Chainage KM total
+* 🧮 Live formula breakdown
+* 📋 One-click copy of results
+* ⚡ Real-time calculations
+* 🌙 Modern dark theme
+* 📱 Responsive design for desktop and mobile
 
 ---
 
-## 🖥️ Preview
+## 🖥️ Application Overview
 
 ### Configuration
 
-- Side
-  - Left
-  - Right
+* **Side**
 
-- Type
-  - With Chainage
-  - Without Chainage
+  * Left
+  * Right
 
-### Input
+* **Calculation Type**
 
-- Flag KM
-- Chainage KM (Multiple values supported)
-- Current KM
+  * With Chainage
+  * Without Chainage
 
-### Output
+### Inputs
 
-- Calculated Chainage
-- Formula Breakdown
-- Copy Result Button
+* Flag KM
+* Chainage KM (supports multiple values)
+* Current KM
+
+### Outputs
+
+* Calculated Chainage
+* Formula Breakdown
+* Copy Result Button
 
 ---
 
-## 📂 Project Structure
+## 🧮 Calculation Formula
 
+### Left Side
+
+```text
+(Flag KM + Total Chainage KM) − Current KM
 ```
-Chainage-Finder/
-│
-├── index.html
-├── README.md
-└── assets/          (optional)
+
+### Right Side
+
+```text
+(Total Chainage KM − Flag KM) + Current KM
+```
+
+### Without Chainage
+
+```text
+Flag KM − Current KM
 ```
 
 ---
 
 ## 🚀 Getting Started
 
-### Clone the repository
+### Option 1 — Use Online
+
+Open the live application:
+
+**https://jokaper-21.github.io/VID_ChainageFinder/chainage_finder.html**
+
+---
+
+### Option 2 — Run Locally
+
+Clone the repository:
 
 ```bash
 git clone https://github.com/yourusername/Chainage-Finder.git
 ```
 
-### Open the project
+Open:
 
-Simply open:
-
-```
+```text
 index.html
 ```
 
-in any modern web browser.
+using any modern web browser.
 
 No installation required.
 
@@ -85,90 +115,81 @@ No build tools.
 
 ---
 
-## 🧮 Calculation Modes
+## 📂 Project Structure
 
-### Left Side
-
-```
-(Flag KM + Total Chainage KM) - Current KM
-```
-
----
-
-### Right Side
-
-```
-(Total Chainage KM - Flag KM) + Current KM
-```
-
----
-
-### Without Chainage
-
-```
-Flag KM - Current KM
+```text
+Chainage-Finder/
+│
+├── index.html
+├── README.md
+└── assets/
 ```
 
 ---
 
 ## 🛠 Built With
 
-- HTML5
-- CSS3
-- JavaScript (Vanilla)
+* HTML5
+* CSS3
+* JavaScript (Vanilla)
 
-No external frameworks.
+No external libraries or frameworks.
 
 ---
 
 ## 🎯 Use Cases
 
-- Road Survey
-- Highway Projects
-- Civil Engineering
-- Site Engineering
-- Survey Calculations
-- Chainage Verification
-- Construction Layout
+* Road Survey
+* Railway Survey
+* Highway Projects
+* Civil Engineering
+* Site Engineering
+* Construction Layout
+* Chainage Verification
+* Survey Calculations
 
 ---
 
 ## 📸 Screenshots
 
-Add screenshots here.
+Add screenshots inside the `screenshots` folder.
 
-```
+```text
 screenshots/
-    home.png
-    calculation.png
+├── home.png
+├── calculation.png
+└── mobile.png
 ```
 
 ---
 
-## Future Improvements
+## 🔮 Future Improvements
 
-- Export calculations
-- Save calculation history
-- Multiple project support
-- Unit conversion
-- PWA support
-- Offline mode
-- AutoCAD integration
-- Civil 3D integration
+* 📤 Export calculations
+* 🕘 Calculation history
+* 📁 Multiple project support
+* 📐 Unit conversion
+* 📶 Offline mode
+* 📱 Progressive Web App (PWA)
+* 🔗 AutoCAD integration
+* 🚆 AutoCAD Civil 3D integration
 
 ---
 
 ## 🤝 Contributing
 
-Contributions, suggestions, and feature requests are welcome.
+Contributions, feature requests, and suggestions are always welcome.
 
-Feel free to fork the repository and submit a pull request.
+1. Fork the repository.
+2. Create a feature branch.
+3. Commit your changes.
+4. Submit a Pull Request.
 
 ---
 
 ## 📄 License
 
-This project is licensed under the MIT License.
+This project is licensed under the **MIT License**.
 
 ---
 
@@ -176,14 +197,19 @@ This project is licensed under the MIT License.
 
 **Jokaper**
 
-Automation enthusiast focused on developing tools for:
+Automation enthusiast developing productivity tools for:
 
-- AutoCAD
-- AutoCAD Civil 3D
-- Survey Engineering
-- Workflow Automation
-- Civil Engineering Productivity Tools
+* AutoCAD
+* AutoCAD Civil 3D
+* Survey Engineering
+* Civil Engineering
+* Railway Projects
+* Workflow Automation
 
 ---
 
-⭐ If this project helped you, consider giving it a star!
+## ⭐ Support
+
+If this project helped you, please consider **giving it a ⭐ on GitHub**.
+
+Your support helps improve and maintain future engineering tools.
