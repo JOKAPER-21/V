@@ -336,6 +336,12 @@
 
   function fmt(n) { return n.toFixed(2); }
 
+  function padCh(n) {
+    var parts = Math.abs(n).toFixed(2).split('.');
+    var intPart = parts[0].padStart(3, '0');
+    return intPart + '.' + parts[1];
+  }
+
   function calculate() {
     const flagKM    = parseFloat(document.getElementById('flagKM').value) || 0;
     const currentKM = parseFloat(document.getElementById('currentKM').value) || 0;
@@ -382,8 +388,8 @@
     signEl.textContent = isRight ? '(+)' : '(-)';
 
     document.getElementById('numSpan').textContent = isCenter
-      ? Math.abs(Math.round(result))
-      : fmt(Math.abs(result));
+      ? String(Math.abs(Math.round(result))).padStart(3, '0')
+      : padCh(result);
     document.getElementById('formulaDisplay').innerHTML = formulaHTML;
     document.getElementById('modeTag').textContent =
       state.side.toUpperCase() + ' · ' + (isCenter ? 'WITHOUT CHAINAGE' : 'WITH CHAINAGE');
